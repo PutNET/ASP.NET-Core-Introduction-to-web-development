@@ -1,0 +1,25 @@
+﻿@model PutNet.Models.Student
+
+<h1>TestController IndexAction</h1>
+
+@if(ViewBag.Student != null)
+{
+    <p>
+        @ViewBag.Student.FirstName
+        @ViewBag.Student.LastName
+        @ViewBag.Student.Index
+    </p>
+}
+
+<form asp-action="Index" asp-controller="Test" method="post">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" />
+
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" />
+
+    <label asp-for="Index"></label>
+    <input asp-for="Index" />
+
+    <input type="submit" />
+</form>
